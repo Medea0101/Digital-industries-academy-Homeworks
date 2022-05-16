@@ -60,8 +60,22 @@ console.log(checkPythagoras(3,4,5))
     დააბრუნოს "Min value is 2 and Max value is 75"
 */
 
+let array = [2,14,25,75,11,6];
+function minMax(a){
+    let max = a[0];
+    let min = a[0];
+    for ( let i = 0; i < a.length; i++){
+        if(a[i] > max){
+            max = a[i];
+        }
+        if (a[i] < min){
+            min = a[i];
+        }
+    }
+    return 'Min is ' + min + ' Max is ' + max
+}
 
- 
+console.log(minMax(array));
 
 //Task 4
 
@@ -106,19 +120,20 @@ console.log(checkAngle(145))
 */
  function checkStudentGrade(scoreIndex){
      for (let i = 0; i < scoreIndex.length; i++){
-         if (studentsGrades[i].grade >= 0 &&  studentsGrades[i].grade <= 50){
+         let grade = studentsGrades[i].grade;
+         if (grade >= 0 &&  grade<= 50){
             studentsGrades[i].finalResult = "F";
          }
-         else if (studentsGrades[i].grade > 50 && studentsGrades[i].grade <=60){
+         else if (grade > 50 && grade <=60){
             studentsGrades[i].finalResult = "E";
          }
-         else if (studentsGrades[i].grade > 60 && studentsGrades[i].grade <=70){
+         else if (grade > 60 && grade <=70){
             studentsGrades[i].finalResult = "D";
          }
-         else if (studentsGrades[i].grade > 70 && studentsGrades[i].grade <= 80){
+         else if (grade > 70 && grade <= 80){
             studentsGrades[i].finalResult = "c";
          }
-         else if (studentsGrades[i].grade > 80 && studentsGrades[i].grade <= 100){
+         else if (grade > 80 && grade <= 100){
             studentsGrades[i].finalResult = "A"
          }
      }
