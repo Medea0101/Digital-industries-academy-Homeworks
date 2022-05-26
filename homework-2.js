@@ -61,6 +61,7 @@ console.log(checkPythagoras(3,4,5))
 */
 
 let array = [2,14,25,75,11,6];
+
 function minMax(a){
     let max = a[0];
     let min = a[0];

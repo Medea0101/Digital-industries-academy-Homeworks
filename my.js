@@ -35,3 +35,32 @@ function pow(x,n){
 }
 console.log(pow(2,3))
 
+
+
+let student = {
+    name: 'saxeli',
+    gvari: 'gvari'
+}
+function changeObject(obj){
+    obj.fullName = 'saxeli gvari'
+}
+changeObject(student);
+console.log(student)
+
+
+
+// this
+
+let person = {
+    name: 'lore',
+    lasName: 'smith',
+    fullName: function(){
+        return this.name + ' ' + this.lasName;
+    }
+}
+console.log(person.fullName())
+
+// globalurshi this
+
+let x = this;
+console.log(x) 
